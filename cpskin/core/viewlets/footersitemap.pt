@@ -20,7 +20,8 @@
                    text view/getFooterText">
     <p tal:condition="python: member.has_role('Manager')">
       <a href="footer-static/edit"
-         i18n:translate="modifier_zone_statique">[Modifier la zone statique]</a>
+         i18n:translate="modifier_zone_statique"
+         i18n:domain="cpskin">[Edit static area]</a>
     </p>
     <p tal:condition="text" tal:replace="structure text" />
   </div>

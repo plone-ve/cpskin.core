@@ -24,7 +24,7 @@ class SendToManagerForm(form.Form):
               default=u'Report an error to the site manager')
 
     description = _(u'provide_maximum_informations',
-                    default=u"Merci de fournir le maximum d'information ainsi que tout renseignement qui permette de la valider (source).")
+                    default=u"Please provide as much information as possible as well as any information that allows it to be validated (source).")
 
     fields = field.Fields(ISendToManagerForm)
     ignoreContext = True

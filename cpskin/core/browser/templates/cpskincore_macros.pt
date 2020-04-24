@@ -415,7 +415,7 @@
           <p tal:condition="python: member.has_permission('Modify portal content', content)">
             <a href=""
                tal:attributes="href string:${content/absolute_url}/edit"
-               i18n:translate="modifier_zone_statique">[Modifier la zone statique]</a>
+               i18n:translate="modifier_zone_statique">[Edit static area]</a>
           </p>
           <p tal:replace="structure content/getText" />
 

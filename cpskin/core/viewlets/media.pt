@@ -1,4 +1,4 @@
-<div id="multimediaviewlet" tal:condition="view/available">
+<div id="multimediaviewlet" tal:condition="view/available" i18n:domain="cpskin">
 
   <tal:def tal:define="albums view/get_albums;
                        videos view/get_videos">
@@ -6,7 +6,7 @@
     <div class=""
          tal:attributes="class python: videos and 'albums-container' or 'albums-container albums-only'"
          tal:condition="albums">
-        <h2 i18n:translate="Photos">Photos</h2>
+        <h2 i18n:translate="Photos">Pictures</h2>
         <div class="left"
              tal:define="first_album python: albums[0]">
             <ul class="albums">
@@ -31,13 +31,13 @@
         <a class="link-all"
                 tal:attributes="href python:view.get_albums_collection().absolute_url()"
                 i18n:translate='link-to-all-albums'>
-                Voir tous les albums
+                View all albums
         </a>
     </div>
     <div class=""
          tal:attributes="class python: albums and 'videos-container' or 'videos-container videos-only'"
          tal:condition="videos">
-        <h2 i18n:translate="Videos">Vidéos</h2>
+        <h2 i18n:translate="Videos">Videos</h2>
         <div class="right">
             <ul class="videos">
                 <li tal:repeat='video videos'>
@@ -50,7 +50,7 @@
             <a href=""
                 tal:attributes="href python:view.get_videos_collection().absolute_url()"
                 class="link-all" i18n:translate='link-to-all-videos'>
-                Voir toutes les vidéos
+                See all videos
             </a>
         </div>
 
